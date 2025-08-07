@@ -1,8 +1,9 @@
 name: Telegram Views AutoRun
 
 on:
-  workflow_dispatch:
-  repository_dispatch:
+  schedule:
+    - cron: "0 */6 * * *"  # Автозапуск каждые 6 часов (время UTC)
+  workflow_dispatch:       # Возможность запустить вручную
 
 jobs:
   run:
